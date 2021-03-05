@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane alignment="center" hgap="10" prefHeight="436.0" prefWidth="845.0" vgap="10" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.view_controller.MainController">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <Pane prefHeight="477.0" prefWidth="841.0">
+         <children>
+            <Label layoutX="31.0" layoutY="27.0" prefHeight="25.0" prefWidth="182.0" text="Inventory Management System" textFill="#1e026b">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="31.0" layoutY="75.0" text="Parts">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="437.0" layoutY="75.0" text="Products">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnExit" layoutX="707.0" layoutY="352.0" mnemonicParsing="false" onAction="#exitProgram" prefHeight="39.0" prefWidth="101.0" text="Exit">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnDeleteProduct" layoutX="605.0" layoutY="352.0" mnemonicParsing="false" onAction="#deleteProduct" prefHeight="39.0" prefWidth="73.0" text="Delete">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnModifyProduct" layoutX="521.0" layoutY="352.0" mnemonicParsing="false" onAction="#modifyProduct" prefHeight="39.0" prefWidth="73.0" text="Modify">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnAddProduct" layoutX="437.0" layoutY="352.0" mnemonicParsing="false" onAction="#addProduct" prefHeight="39.0" prefWidth="73.0" text="Add">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnDeletePart" layoutX="197.0" layoutY="352.0" mnemonicParsing="false" onAction="#deletePart" prefHeight="39.0" prefWidth="73.0" text="Delete">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnModifyPart" layoutX="115.0" layoutY="352.0" mnemonicParsing="false" onAction="#modifyPart" prefHeight="39.0" prefWidth="73.0" text="Modify">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnAddPart" layoutX="31.0" layoutY="352.0" mnemonicParsing="false" onAction="#addPart" prefHeight="39.0" prefWidth="73.0" text="Add">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnSearchParts" layoutX="344.0" layoutY="71.0" mnemonicParsing="false" onAction="#searchParts" text="Search">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnSearchProducts" layoutX="752.0" layoutY="71.0" mnemonicParsing="false" onAction="#searchProducts" text="Search">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Button>
+            <TextField fx:id="txtSearchParts" layoutX="188.0" layoutY="70.0" />
+            <TextField fx:id="txtSearchProducts" layoutX="594.0" layoutY="70.0" />
+            <TableView fx:id="tblParts" layoutX="31.0" layoutY="100.0" prefHeight="237.0" prefWidth="370.0">
+              <columns>
+                <TableColumn fx:id="tblPartsIDColumn" prefWidth="50.0" text="Part ID" />
+                <TableColumn fx:id="tblPartsNameColumn" text="Part Name" />
+                  <TableColumn fx:id="tblPartsInvLvlColumn" prefWidth="110.0" text="Inventory Level" />
+                  <TableColumn fx:id="tblPartsPPUColumn" prefWidth="130.0" text="Price/Cost Per Unit" />
+              </columns>
+            </TableView>
+            <TableView fx:id="tblProducts" layoutX="437.0" layoutY="100.0" prefHeight="237.0" prefWidth="370.0">
+              <columns>
+                <TableColumn fx:id="tblProductsIDColumn" text="Product ID" />
+                <TableColumn fx:id="tblProductsNameColumn" prefWidth="90.0" text="Product Name" />
+                  <TableColumn fx:id="tblProductsInvLvlColumn" prefWidth="100.0" text="Inventory Level" />
+                  <TableColumn fx:id="tblProductsPPUColumn" prefWidth="100.0" text="Price Per Unit" />
+              </columns>
+            </TableView>
+         </children>
+      </Pane>
+   </children>
+</GridPane>
